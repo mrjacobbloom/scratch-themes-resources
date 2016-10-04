@@ -1,69 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-  <filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%">
-    <feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1" />
-    <feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15" />
-    <feOffset result="offset-3" in="blur-1" dx="1" dy="1" />
-    <feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1" />
-    <feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4" />
-    <feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7" />
-    <feOffset result="offset-7" in="blur-1" dx="-1" dy="-1" />
-    <feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1" />
-    <feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8" />
-    <feMerge result="merge-10">
-      <feMergeNode in="SourceGraphic" />
-      <feMergeNode in="comp-5" />
-      <feMergeNode in="comp-9" />
-    </feMerge>
-  </filter>
-  <filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%">
-     <!-- dark filter chunk -->
-     <feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood>
-     <feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite>
-     <feMerge result="merge-3">
-        <feMergeNode in="comp-2"></feMergeNode>
-     </feMerge>
-     <!-- bevel filter chunk -->
-     <feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur>
-     <feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood>
-     <feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset>
-     <feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite>
-     <feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite>
-     <feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood>
-     <feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset>
-     <feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite>
-     <feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite>
-     <feMerge result="merge-10">
-        <feMergeNode in="comp-5"></feMergeNode>
-        <feMergeNode in="comp-9"></feMergeNode>
-     </feMerge>
-     <feMerge result="merge-11">
-        <feMergeNode in="SourceGraphic"></feMergeNode>
-        <feMergeNode in="merge-3"></feMergeNode>
-        <feMergeNode in="merge-10"></feMergeNode>
-     </feMerge>
-  </filter>
-  <filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%">
-     <feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur>
-     <feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood>
-     <feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset>
-     <feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite>
-     <feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite>
-     <feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood>
-     <feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset>
-     <feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite>
-     <feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite>
-     <feMerge result="merge-10">
-        <feMergeNode in="SourceGraphic"></feMergeNode>
-        <feMergeNode in="comp-5"></feMergeNode>
-        <feMergeNode in="comp-9"></feMergeNode>
-     </feMerge>
-  </filter>
-  <filter id="dragFilter" height="140%" width="140%">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
-    <feComponentTransfer result="offsetBlur">
-        <feFuncA type="linear" slope="0.5"></feFuncA>
-    </feComponentTransfer>
-    <feOffset in="offsetBlur" dx="10" dy="10" result="shadow"/>
-    <feComposite in="SourceGraphic" in2="shadow" operator="over"></feComposite>
- </filter>
+<svg xmlns="http://www.w3.org/2000/svg" version=\"1.1\">
+  <defs>
+    <filter id="bevelFilter" x0="-50%" y0="-50%" width="200%" height="200%">
+      <feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1" />
+      <feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15" />
+      <feOffset result="offset-3" in="blur-1" dx="1" dy="1" />
+      <feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1" />
+      <feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4" />
+      <feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7" />
+      <feOffset result="offset-7" in="blur-1" dx="-1" dy="-1" />
+      <feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1" />
+      <feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8" />
+      <feMerge result="merge-10">
+        <feMergeNode in="SourceGraphic" />
+        <feMergeNode in="comp-5" />
+        <feMergeNode in="comp-9" />
+      </feMerge>
+    </filter>
+    <filter id="inputDarkFilter" x0="-50%" y0="-50%" width="200%" height="200%">
+       <!-- dark filter chunk -->
+       <feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood>
+       <feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite>
+       <feMerge result="merge-3">
+          <feMergeNode in="comp-2"></feMergeNode>
+       </feMerge>
+       <!-- bevel filter chunk -->
+       <feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur>
+       <feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood>
+       <feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset>
+       <feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite>
+       <feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite>
+       <feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood>
+       <feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset>
+       <feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite>
+       <feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite>
+       <feMerge result="merge-10">
+          <feMergeNode in="comp-5"></feMergeNode>
+          <feMergeNode in="comp-9"></feMergeNode>
+       </feMerge>
+       <feMerge result="merge-11">
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+          <feMergeNode in="merge-3"></feMergeNode>
+          <feMergeNode in="merge-10"></feMergeNode>
+       </feMerge>
+    </filter>
+    <filter id="inputBevelFilter" x0="-50%" y0="-50%" width="200%" height="200%">
+       <feGaussianBlur result="blur-1" in="SourceAlpha" stdDeviation="1 1"></feGaussianBlur>
+       <feFlood result="flood-2" in="undefined" flood-color="#fff" flood-opacity="0.15"></feFlood>
+       <feOffset result="offset-3" in="blur-1" dx="-1" dy="-1"></feOffset>
+       <feComposite result="comp-4" operator="arithmetic" in="SourceAlpha" in2="offset-3" k2="1" k3="-1"></feComposite>
+       <feComposite result="comp-5" operator="in" in="flood-2" in2="comp-4"></feComposite>
+       <feFlood result="flood-6" in="undefined" flood-color="#000" flood-opacity="0.7"></feFlood>
+       <feOffset result="offset-7" in="blur-1" dx="1" dy="1"></feOffset>
+       <feComposite result="comp-8" operator="arithmetic" in="SourceAlpha" in2="offset-7" k2="1" k3="-1"></feComposite>
+       <feComposite result="comp-9" operator="in" in="flood-6" in2="comp-8"></feComposite>
+       <feMerge result="merge-10">
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+          <feMergeNode in="comp-5"></feMergeNode>
+          <feMergeNode in="comp-9"></feMergeNode>
+       </feMerge>
+    </filter>
+    <filter id="dragFilter" height="140%" width="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+      <feComponentTransfer result="offsetBlur">
+          <feFuncA type="linear" slope="0.5"></feFuncA>
+      </feComponentTransfer>
+      <feOffset in="offsetBlur" dx="10" dy="10" result="shadow"/>
+      <feComposite in="SourceGraphic" in2="shadow" operator="over"></feComposite>
+   </filter>
+ </defs>
 </svg>
