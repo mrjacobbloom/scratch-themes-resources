@@ -1,0 +1,186 @@
+/* workspace */
+.blocklyMainBackground {
+	fill: rgb(221, 222, 222) !important;
+}
+.blocklyDragSurface > g {
+	filter: url(#dragFilter);
+}
+
+/* fields */
+g:not([data-shapes~="argument"]) > path.blocklyBlockBackground {
+	filter: url(#bevelFilter);
+}
+/* TODO: exclude comboboxes when those are implemented */
+g:not([data-argument-type~="dropdown"]) > .blocklyBlockBackground {
+	filter: url(#inputBevelFilter);
+}
+g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+path[data-argument-type] { /* not just booleans, also other things that may or may not exist */
+	filter: url(#inputDarkFilter) !important;
+	fill-opacity: 1;
+}
+text.blocklyText {
+	font-weight: bold;
+}
+.blocklyEditableText > text {
+	font-weight: normal;
+	word-spacing: 0;
+}
+g[data-argument-type~="dropdown"] > image,
+g[data-argument-type~="dropdown"] > g > image{
+	filter: url(#blackArrow);
+}
+
+g.blocklyReplaceable {
+	filter: url(#blocklyReplacementGlowFilter);
+}
+path.blocklyReplaceable {
+	filter: url(#inputDarkPlusReplacementGlow) !important;
+}
+g.blocklyInsertionMarker > path.blocklyBlockBackground {
+	/* for now, insertion markers can be white.
+	I'd have to hardcore hack Blockly to make them appear as lines like in 2.0
+	Besides, w/ bevelFilter this looks super nice */
+	fill: #fff !important;
+	stroke: #fff !important;
+	fill-opacity: 1;
+	opacity: .5;
+}
+
+/* the html bits that you interact with */
+.blocklyDropDownDiv {
+	transform: none !important;
+	border-radius: 0;
+	border: none;
+	transition: none !important;
+	box-shadow: 3px 3px 2px rgba(50, 50, 50, .4);
+	padding: 0;
+}
+.blocklyDropDownDiv .goog-menuitem {
+	padding: 3px 10px 3px 20px;
+	font-weight: normal;
+}
+.goog-menuitem-checkbox {
+	display: none;
+}
+.blocklyDropDownDiv .goog-menuitem-highlight {
+	background: rgba(255, 255, 255, .3) !important;
+}
+.blocklyDropDownArrow {
+	display: none;
+}
+.fieldTextInput {
+	box-shadow: none !important;
+}
+
+/* block colors */
+g[data-category="motion"] > path.blocklyBlockBackground,
+g[data-category="motion"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="motion"] > path[data-argument-type] {
+	fill: #4a6cd4;
+	stroke: #4a6cd4;
+}
+
+g[data-category="looks"] > path.blocklyBlockBackground,
+g[data-category="looks"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="looks"] > path[data-argument-type] {
+	fill: #8a55d7;
+	stroke: #8a55d7;
+}
+
+g[data-category="sounds"] > path.blocklyBlockBackground,
+g[data-category="sounds"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="sounds"] > path[data-argument-type] {
+	fill: #bb42c3;
+	stroke: #bb42c3;
+}
+
+g[data-category="pen"] > path.blocklyBlockBackground,
+g[data-category="pen"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="pen"] > path[data-argument-type] {
+	fill: #0e9a6c;
+	stroke: #0e9a6c;
+}
+
+g[data-category="events"] > path.blocklyBlockBackground,
+g[data-category="events"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="events"] > path[data-argument-type] {
+	fill: #c88330;
+	stroke: #c88330;
+}
+
+g[data-category="control"] > path.blocklyBlockBackground,
+g[data-category="control"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="control"] > path[data-argument-type] {
+	fill: #e1a91a;
+	stroke: #e1a91a;
+}
+
+g[data-category="sensing"] > path.blocklyBlockBackground,
+g[data-category="sensing"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="sensing"] > path[data-argument-type] {
+	fill: #2ca5e2;
+	stroke: #2ca5e2;
+}
+
+g[data-category="operators"] > path.blocklyBlockBackground,
+g[data-category="operators"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="operators"] > path[data-argument-type] {
+	fill: #5cb712;
+	stroke: #5cb712;
+}
+
+g[data-category="data"] > path.blocklyBlockBackground,
+g[data-category="data"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="data"] > path[data-argument-type] {
+	fill: #ee7d16;
+	stroke: #ee7d16;
+}
+
+g[data-category="more"] > path.blocklyBlockBackground,
+g[data-category="more"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="more"] > path[data-argument-type] {
+	fill: #632d99;
+	stroke: #632d99;
+}
+
+/* dropdown colors */
+.blocklyDropDownDiv[data-category="motion"] {
+	background: #4a6cd4 !important;
+}
+
+.blocklyDropDownDiv[data-category="looks"] {
+	background: #8a55d7 !important;
+}
+
+.blocklyDropDownDiv[data-category="sounds"] {
+	background: #bb42c3 !important;
+}
+
+.blocklyDropDownDiv[data-category="pen"] {
+	background: #0e9a6c !important;
+}
+
+.blocklyDropDownDiv[data-category="events"] {
+	background: #c88330 !important;
+}
+
+.blocklyDropDownDiv[data-category="control"] {
+	background: #e1a91a !important;
+}
+
+.blocklyDropDownDiv[data-category="sensing"] {
+	background: #2ca5e2 !important;
+}
+
+.blocklyDropDownDiv[data-category="operators"] {
+	background: #5cb712 !important;
+}
+
+.blocklyDropDownDiv[data-category="data"] {
+	background: #ee7d16 !important;
+}
+
+.blocklyDropDownDiv[data-category="more"] {
+	background: #632d99 !important;
+}
