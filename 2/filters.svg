@@ -68,5 +68,12 @@
       <feOffset in="offsetBlur" dx="10" dy="10" result="shadow"/>
       <feComposite in="SourceGraphic" in2="shadow" operator="over"></feComposite>
    </filter>
+   <filter id="blackArrow" width="100%" height="100%">
+     <feFlood result="flood-1" in="undefined" flood-color="#000" flood-opacity="0.2"></feFlood>
+     <feComposite result="comp-2" operator="in" in="flood-1" in2="SourceAlpha"></feComposite>
+     <feMerge result="merge-3">
+        <feMergeNode in="comp-2"></feMergeNode>
+     </feMerge>
+  </filter>
  </defs>
 </svg>
