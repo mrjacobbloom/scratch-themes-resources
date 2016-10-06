@@ -75,7 +75,7 @@
         <feMergeNode in="comp-2"></feMergeNode>
      </feMerge>
   </filter>
-  <filter id="inputDarkPlusReplacementGlow" height="160%" width="180%" y="-30%"x="-40%">
+  <filter id="inputDarkPlusReplacementGlow" height="160%" width="180%" y="-30%" x="-40%">
     <!-- replacement glow chunk -->
     <feGaussianBlur in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
     <feComponentTransfer result="outBlur">
