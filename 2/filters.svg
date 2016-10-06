@@ -106,10 +106,10 @@
     </feMerge>
     <!-- ok now merge everything -->
     <feMerge result="merge-11">
-       <feMergeNode in="SourceGraphic"></feMergeNode>
-       <feMergeNode in="merge-3"></feMergeNode>
-       <feMergeNode in="merge-10"></feMergeNode>
-       <feMergeNode in="outGlow"></feMergeNode>
+      <feMergeNode in="outGlow"></feMergeNode>
+      <feMergeNode in="SourceGraphic"></feMergeNode>
+      <feMergeNode in="merge-3"></feMergeNode>
+      <feMergeNode in="merge-10"></feMergeNode>
     </feMerge>
   </filter>
  </defs>
