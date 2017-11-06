@@ -95,9 +95,9 @@ g[data-category="sounds"] > path[data-argument-type] {
 	stroke: #bb42c3;
 }
 
-g[data-category="pen"] > path.blocklyBlockBackground,
-g[data-category="pen"] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
-g[data-category="pen"] > path[data-argument-type] {
+g[data-category="pen" i] > path.blocklyBlockBackground,
+g[data-category="pen" i] > g[data-argument-type~="dropdown"] > .blocklyBlockBackground,
+g[data-category="pen" i] > path[data-argument-type] {
 	fill: #0e9a6c;
 	stroke: #0e9a6c;
 }
