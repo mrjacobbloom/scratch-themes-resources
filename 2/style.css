@@ -157,7 +157,7 @@ g[data-category="more"] > path[data-argument-type] {
 	background: #bb42c3 !important;
 }
 
-.blocklyDropDownDiv[data-category="pen"] {
+.blocklyDropDownDiv[data-category="pen" i] {
 	background: #0e9a6c !important;
 }
 
